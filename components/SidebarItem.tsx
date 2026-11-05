@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { twMerge } from "tailwind-merge";
-import { Link } from "next/link";
+import Link from "next/link";
+
 
 interface SidebarItemProps {
     icon: IconType;
@@ -12,7 +13,7 @@ interface SidebarItemProps {
 
 
 const SidebarItem: React.FC<SidebarItemProps> = ({
-icon,
+icon: Icon,
 label,
 active,
 href
@@ -36,7 +37,9 @@ href
          py-1
             `, active && 'text-white')}
         >
-            Sidebar Item
+            <Icon size={26} />
+        
+        <p className="truncate w-full">{label}</p>
         </Link>
     )
 }
