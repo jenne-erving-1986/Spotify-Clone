@@ -46,7 +46,7 @@ if (user && !isLoadingData && !userDetails && !subscription) {
             const subscriptionPromise = results[1];
 
             if (userDetailsPromise.status === "fulfilled") {
-                setUserDetails(userDetailsPromise.value.data as userDetails);
+                setUserDetails(userDetailsPromise.value.data as UserDetails);
             }
 
             if (subscriptionPromise.status === "fulfilled") {

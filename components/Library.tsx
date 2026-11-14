@@ -18,7 +18,7 @@ const Library = () => {
            px-5
            pt-4
            ">
-            <div classname="
+            <div className="
             inline-flex
             items-center
             gap-x-2
