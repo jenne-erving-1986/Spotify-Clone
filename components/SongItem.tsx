@@ -2,6 +2,8 @@
 
 import useLoadImage from "@/hooks/useLoadImage";
 import { Song } from "@/types";
+import Image from "next/image";
+
 
 
 
@@ -35,7 +37,30 @@ const SongItem: React.FC<SongItemProps> = ({
         p-3
         "
         >
-            Song Item
+            <div className="
+            relative
+            aspect-square
+            w-full
+            h-full
+            rounded-md
+            overflow-hidden
+            "
+            >
+                <Image 
+                className="object-cover"
+                src={imagePath || '/images/liked.png'}
+                fill
+                alt="Image"
+                />
+            </div>
+            <div className="flex flex-col items-start w-full p-4 gap-y-1">
+                <p className="font-semibold truncate w-full">
+                    {data.title}
+                </p>
+                <p>
+                    By {data.author}
+                </p>
+            </div>
         </div>
     );
 }
